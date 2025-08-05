@@ -11,7 +11,7 @@ htmlElement.setAttribute('data-theme', currentTheme);
 themeToggle.addEventListener('click', () => {
     const theme = htmlElement.getAttribute('data-theme');
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    
+
     htmlElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 });
@@ -22,15 +22,15 @@ const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    
+
     // Animate hamburger menu
     const spans = navToggle.querySelectorAll('span');
-    spans[0].style.transform = navMenu.classList.contains('active') 
-        ? 'rotate(45deg) translateY(8px)' 
+    spans[0].style.transform = navMenu.classList.contains('active')
+        ? 'rotate(45deg) translateY(8px)'
         : 'none';
     spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-    spans[2].style.transform = navMenu.classList.contains('active') 
-        ? 'rotate(-45deg) translateY(-8px)' 
+    spans[2].style.transform = navMenu.classList.contains('active')
+        ? 'rotate(-45deg) translateY(-8px)'
         : 'none';
 });
 
@@ -67,12 +67,12 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 function highlightNavLink() {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -104,7 +104,7 @@ class BlogSystem {
             // Load blog posts index
             const response = await fetch('/blog/posts.json');
             const data = await response.json();
-            
+
             // Load content for each post
             for (const post of data.posts) {
                 const contentResponse = await fetch(`/blog/${post.file}`);
@@ -192,7 +192,7 @@ Stay tuned for more technical content, tutorials, and project showcases!
 
         // Convert markdown to HTML (basic implementation)
         const htmlContent = this.markdownToHtml(post.content);
-        
+
         // Create modal to show full post
         const modal = document.createElement('div');
         modal.className = 'blog-modal';
@@ -206,14 +206,14 @@ Stay tuned for more technical content, tutorials, and project showcases!
                 </article>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Close modal functionality
         modal.querySelector('.blog-modal-close').addEventListener('click', () => {
             modal.remove();
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.remove();
@@ -224,41 +224,41 @@ Stay tuned for more technical content, tutorials, and project showcases!
     markdownToHtml(markdown) {
         // Enhanced markdown to HTML conversion
         let html = markdown;
-        
+
         // Code blocks
         html = html.replace(/```([^`]*)```/g, '<pre><code>$1</code></pre>');
-        
+
         // Headers
         html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
         html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
         html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-        
+
         // Bold
         html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-        
+
         // Italic - more precise to avoid conflicts with lists
         html = html.replace(/(?<!\*)\*(?!\*)([^*]+)\*(?!\*)/g, '<em>$1</em>');
-        
+
         // Links
         html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-        
+
         // Numbered lists
         html = html.replace(/^\d+\. (.+)$/gim, '<oli>$1</oli>');
         html = html.replace(/(<oli>.*<\/oli>)/s, (match) => {
             const items = match.replace(/<\/?oli>/g, '');
             return '<ol>' + items.split('\n').filter(item => item.trim()).map(item => '<li>' + item + '</li>').join('') + '</ol>';
         });
-        
+
         // Bullet lists
         html = html.replace(/^[\*\-] (.+)$/gim, '<uli>$1</uli>');
         html = html.replace(/(<uli>[\s\S]*?<\/uli>)(?!\n<uli>)/g, (match) => {
             const items = match.replace(/<\/?uli>/g, '');
             return '<ul>' + items.split('\n').filter(item => item.trim()).map(item => '<li>' + item + '</li>').join('') + '</ul>';
         });
-        
+
         // Horizontal rule
         html = html.replace(/^---$/gim, '<hr>');
-        
+
         // Paragraphs
         html = html.split('\n\n').map(paragraph => {
             if (paragraph.startsWith('<h') || paragraph.startsWith('<ul') || paragraph.startsWith('<ol') || paragraph.startsWith('<pre')) {
@@ -266,7 +266,7 @@ Stay tuned for more technical content, tutorials, and project showcases!
             }
             return '<p>' + paragraph + '</p>';
         }).join('\n');
-        
+
         // Clean up
         html = html.replace(/<p><h/g, '<h');
         html = html.replace(/<\/h(\d)><\/p>/g, '</h$1>');
@@ -275,7 +275,7 @@ Stay tuned for more technical content, tutorials, and project showcases!
         html = html.replace(/<p><ol>/g, '<ol>');
         html = html.replace(/<\/ol><\/p>/g, '</ol>');
         html = html.replace(/<p><hr><\/p>/g, '<hr>');
-        
+
         return html;
     }
 
@@ -305,7 +305,7 @@ const modalStyles = `
         justify-content: center;
         padding: var(--spacing-lg);
     }
-    
+
     .blog-modal-content {
         background: var(--surface);
         border-radius: 12px;
@@ -315,7 +315,7 @@ const modalStyles = `
         padding: var(--spacing-2xl);
         position: relative;
     }
-    
+
     .blog-modal-close {
         position: absolute;
         top: var(--spacing-md);
@@ -327,46 +327,46 @@ const modalStyles = `
         cursor: pointer;
         transition: var(--transition);
     }
-    
+
     .blog-modal-close:hover {
         color: var(--primary-color);
     }
-    
+
     .blog-full-post h1 {
         color: var(--primary-color);
         margin-bottom: var(--spacing-sm);
     }
-    
+
     .blog-content {
         margin-top: var(--spacing-xl);
         line-height: 1.8;
     }
-    
+
     .blog-content h2 {
         color: var(--primary-light);
         margin: var(--spacing-xl) 0 var(--spacing-md) 0;
     }
-    
+
     .blog-content h3 {
         color: var(--primary-color);
         margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
     }
-    
+
     .blog-content ul {
         margin: var(--spacing-md) 0;
         padding-left: var(--spacing-xl);
     }
-    
+
     .blog-content li {
         margin: var(--spacing-xs) 0;
         color: var(--text-secondary);
     }
-    
+
     .blog-content a {
         color: var(--accent);
         text-decoration: none;
     }
-    
+
     .blog-content a:hover {
         text-decoration: underline;
     }

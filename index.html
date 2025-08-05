@@ -1,193 +1,164 @@
-<!doctype html>
-<!--
-  This is a built from a template!
-
-  Hyperspace by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Koori</title>
-  <meta charset="utf-8">
-  <meta name="description"  content="Koori's website">
-  <meta name="author"       content="Koori">
-  <meta name="keywords"     content="software,gamedev,digipen,c++,cybersecurity,engineer,developer">
-  <meta name="viewport"     content="width=device-width, initial-scale=1, user-scalable=no"/>
-
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
-
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvin "Koori" Tan - HFT/Low Latency</title>
+    <meta name="description" content="Alvin Koori Tan - Software Developer/Engineer specializing in C++, cybersecurity, and blockchain technology">
+    <meta name="keywords" content="software,developer,engineer,c++,cybersecurity,blockchain,ai,machine-learning">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/modern.css">
 </head>
-<body class="is-preload">
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
 
-  <!-- Sidebar-->
-  <section id="sidebar">
-    <div class="inner">
-      <nav>
-        <ul>
-          <li><a href="#intro">Welcome</a></li>
-          <li><a href="#one">Profile</a></li>
-          <li><a href="#two">Projects</a></li>
-          <li><a href="#three">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <!-- Wrapper -->
-  <div id="wrapper">
-
-    <!-- #intro Welcome-->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-      <div class="inner">
-        <h1>Alvin "Koori" Tan</h1>
-        <p>software developer / engineer</p>
-        <ul class="actions">
-          <li><a href="#one" class="button scrolly">About me</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- #one Profile -->
-    <section id="one" class="wrapper style2 spotlights">
-      <section>
-        <a class="image"><img src="images/profile.jpg" alt="" data-position="0% 15%" /></a>
-        <div class="content">
-          <div class="inner">
-            <h2>Curriculum Vitae</h2>
-            <p>An avid learner who likes to program tools and exploring the possibility of improving existing algorithms and data structures to improve the speed and latency of the program.</p>
-            <p>Delving deep into the world of C++ and also Cybersecurity on my own time.</p>
-            <p>Also interested in the field of A.I. / Machine Learning / Deep Learning / Blockchain Technology and infuse it into Cybersecurity or other areas of interest such as the creative industry.</p>
-            <ul class="actions">
-              <li><a href="assets\doc\resume.pdf" class="button">View</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Koori</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-          </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </section>
-      <section>
-        <a class="image"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" data-position="center center" /></a>
-        <div class="content">
-          <div class="inner">
-            <h2>GitHub</h2>
-            <p>C++ is life!</p>
-            <ul class="actions">
-              <li><a href="https://github.com/Kooriii" class="button">See more</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section>
-        <a class="image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="" data-position="center center" /></a>
-        <div class="content">
-          <div class="inner">
-            <h2>LinkedIn</h2>
-            <p>Connect with me yeah?</p>
-            <ul class="actions">
-              <li><a href="https://www.linkedin.com/in/alvin-koori/" class="button">Connect</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-  </section>
+    </nav>
 
-  <!-- #two Projects -->
-  <section id="two" class="wrapper style3 fade-up">
-      <div class="inner">
-        <h2>Projects</h2>
-        <p>Here are some of the projects over the past few years.</p>
-        <div class="features">
-          <section>
-            <span class="icon"><img src="images/scrapmettle.png" alt="" style="width:18%;height:18%;"></span>
-            <h3>Scrap Mettle</h3>
-            <p>Tools Programmer</p>
-              <ul>
-                <li>Modular Performance Profiler</li>
-                <li>Logging System (Collapsible entries)</li>
-                <li>AngelScript Integration (Scripting language #1)</li>
-                <li>C# Integration (Scripting language #2)</li>
-              </ul>
-            <p>Articles</p>
-              <ul>
-                <li><a href="https://games.digipen.edu/games/scrap-mettle">Alpha Beta Gamer</a></li>
-              </ul>
-            <a href="https://games.digipen.edu/games/scrap-mettle" class="button">Download Game</a>
-            <!-- <a class="button">WIP</a> -->
-          </section>
-          <section>
-            <span class="icon"><img src="images/manawa.png" alt="" style="width:9%;height:18%;"></span>
-            <h3>Manawa</h3>
-            <p>Programmer</p>
-              <ul>
-                <li>Engine architecture</li>
-                <li>Engine optimization</li>
-                <li>Editor tools</li>
-              </ul>
-            <a href="https://games.digipen.edu/games/manawa" class="button">Download Game</a>
-          </section>
-        </div>
-      </div>
-    </section>
-
-  <!-- #three Contact -->
-  <section id="three" class="wrapper style1 fade-up">
-      <div class="inner">
-        <!-- <h2>Contact Form</h2>
-        <p>Do contact me through email, not this form.</p>
-        <div class="split style1">
-          <section>
-            <form method="post" action="mailto:alvin.koori@gmail.com">
-              <div class="fields">
-                <div class="field half">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Alvin "Koori" Tan</h1>
+                    <p class="hero-subtitle">Software Developer / Engineer</p>
+                    <div class="hero-cta">
+                        <a href="#about" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-                <div class="field half">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" id="email" />
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/profile.jpg" alt="Alvin Koori Tan">
+                    </div>
+                    <div class="about-content">
+                        <p>An avid learner who likes to program tools and explore the possibility of improving existing algorithms and data structures to enhance program speed and reduce latency.</p>
+                        <p>Delving deep into the world of C++ and Cybersecurity, with a passion for integrating A.I., Machine Learning, Deep Learning, and Blockchain Technology into various fields of interest.</p>
+                        <div class="about-links">
+                            <a href="https://github.com/Kooriii" class="social-link" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/alvin-koori/" class="social-link" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" rows="5"></textarea>
+                <div class="projects-section">
+                    <h3>Featured Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="images/scrapmettle.png" alt="Scrap Mettle" class="project-icon">
+                            <h4>Scrap Mettle</h4>
+                            <p class="project-role">Tools Programmer</p>
+                            <ul class="project-features">
+                                <li>Modular Performance Profiler</li>
+                                <li>Logging System (Collapsible entries)</li>
+                                <li>AngelScript Integration</li>
+                                <li>C# Integration</li>
+                            </ul>
+                            <a href="https://games.digipen.edu/games/scrap-mettle" class="btn btn-secondary" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/manawa.png" alt="Manawa" class="project-icon">
+                            <h4>Manawa</h4>
+                            <p class="project-role">Programmer</p>
+                            <ul class="project-features">
+                                <li>Engine architecture</li>
+                                <li>Engine optimization</li>
+                                <li>Editor tools</li>
+                            </ul>
+                            <a href="https://games.digipen.edu/games/manawa" class="btn btn-secondary" target="_blank">View Project</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <ul class="actions">
-                <li><a href="" class="button submit">Send Message</a></li>
-              </ul>
-            </form>
-          </section> -->
-          <section>
-            <ul class="contact">
-              <li>
-                <h3>Contact</h3>
-                <a href="mailto:alvin.koori@gmail.com">alvin.koori@gmail.com</a>
-              </li>
-            </ul>
-          </section>
+            </div>
+        </section>
 
-  </div>
-  <!-- Footer -->
-  <footer id="footer" class="wrapper style1">
-    <div class="inner">
-      <ul class="menu">
-          <li>&copy; 2018-2019 Koori. All rights reserved.</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </div>
-  </footer>
+        <!-- Blog Section -->
+        <section id="blog" class="section blog">
+            <div class="container">
+                <h2 class="section-title">Blog</h2>
+                <div id="blogContainer" class="blog-grid">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+            </div>
+        </section>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
+        <!-- Resume Section -->
+        <section id="resume" class="section resume">
+            <div class="container">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-content">
+                    <p>Download my latest resume to learn more about my experience and skills.</p>
+                    <a href="assets/doc/resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p>Feel free to reach out for collaborations or opportunities.</p>
+                    <a href="mailto:alvin.koori@gmail.com" class="btn btn-primary">Email Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alvin "Koori" Tan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/modern.js"></script>
 </body>
 </html>

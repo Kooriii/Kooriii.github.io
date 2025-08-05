@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": "welcome-2025",
+      "title": "Welcome to My New Blog",
+      "date": "2025-08-06",
+      "excerpt": "This is the first post on my newly redesigned website. I'll be sharing thoughts on software development.",
+      "file": "welcome-2025.md"
+    }
+  ]
+}
